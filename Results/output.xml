@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180801 10:50:28.233" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<suite source="/Users/eakturk/robotFramework/Tests/robotFrame.robot" id="s1" name="robotFrame">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Go to homepage</arg>
+<arg>AND</arg>
+<arg>Disable all popups</arg>
+</arguments>
+<kw name="Go to homepage">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180801 10:50:28.353" level="INFO">Opening browser 'chrome' to base url 'https://www.gittigidiyor.com'.</msg>
+<status status="PASS" endtime="20180801 10:50:38.090" starttime="20180801 10:50:28.353"></status>
+</kw>
+<status status="PASS" endtime="20180801 10:50:38.091" starttime="20180801 10:50:28.352"></status>
+</kw>
+<kw name="Disable all popups">
+<kw name="Add Cookie" library="Selenium2Library">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>SFTBA</arg>
+<arg>abtfs_A150</arg>
+<arg>domain=.gittigidiyor.com</arg>
+</arguments>
+<status status="PASS" endtime="20180801 10:50:38.100" starttime="20180801 10:50:38.093"></status>
+</kw>
+<kw name="Add Cookie" library="Selenium2Library">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>abtest</arg>
+<arg>APS3%2CHCT2%2CSBF3</arg>
+<arg>domain=.gittigidiyor.com</arg>
+</arguments>
+<status status="PASS" endtime="20180801 10:50:38.106" starttime="20180801 10:50:38.100"></status>
+</kw>
+<kw name="Add Cookie" library="Selenium2Library">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>wis_l_ignorelb</arg>
+<arg>1</arg>
+<arg>domain=.gittigidiyor.com</arg>
+</arguments>
+<status status="PASS" endtime="20180801 10:50:38.110" starttime="20180801 10:50:38.106"></status>
+</kw>
+<kw name="Add Cookie" library="Selenium2Library">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>notifyer</arg>
+<arg>{“notificationStatus”:“granted”}</arg>
+<arg>domain=.gittigidiyor.com</arg>
+</arguments>
+<status status="PASS" endtime="20180801 10:50:38.117" starttime="20180801 10:50:38.110"></status>
+</kw>
+<kw name="Add Cookie" library="Selenium2Library">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>ggPolicyBoxIsHidden</arg>
+<arg>true</arg>
+<arg>domain=.gittigidiyor.com</arg>
+</arguments>
+<status status="PASS" endtime="20180801 10:50:38.122" starttime="20180801 10:50:38.117"></status>
+</kw>
+<kw name="Get Cookies" library="Selenium2Library">
+<doc>Returns all cookies of the current page.</doc>
+<assign>
+<var>${All_cookies_1}</var>
+</assign>
+<msg timestamp="20180801 10:50:38.127" level="INFO">${All_cookies_1} = notifyer={“notificationStatus”:“granted”}; _gat=1; wis_v=1533109833872|1|Home Page|1; abtest=APS3%2CHCT2%2CSBF3; _ga=GA1.2.974489991.1533109834; AMP_TOKEN=%24NOT_FOUND; _sgf_session_id=918934433947803...</msg>
+<status status="PASS" endtime="20180801 10:50:38.127" starttime="20180801 10:50:38.122"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${All_cookies_1}</arg>
+<arg>console=no</arg>
+</arguments>
+<msg timestamp="20180801 10:50:38.128" level="INFO">notifyer={“notificationStatus”:“granted”}; _gat=1; wis_v=1533109833872|1|Home Page|1; abtest=APS3%2CHCT2%2CSBF3; _ga=GA1.2.974489991.1533109834; AMP_TOKEN=%24NOT_FOUND; _sgf_session_id=9189344339478036480; gr_reco=164f4778cb5-710368433d6a6703; SFTBA=abtfs_A150; ggPolicyBoxIsHidden=true; _vwo_uuid_v2=D6957D31310A4DD1B603A690CACEA1226|7ee5b6a5db55c8b1458551c6808f684e; s_fid=48415A183ABCF119-394889199DF8D0DB; __gads=ID=009533f164b822cd:T=1533109835:S=ALNI_MbuBMahQiqVLbt1CSTDcmWr10DNNw; _sgf_user_id=9189344339478036481; pwaCookieName=PWA3; s_getNewRepeat=1533109832083-New; wis_i_13169=14652; gr_session=164f4778c0d-24be0afe8028ea15; wis_u=03a62b65-fbde-0433-8e46-c704f2dc5598|1533109833872|1|; TS01889d4d=015c1813ee099d20d6b69a6262ea5de7130a79ea64e2b78cafcec4950894ae2f15bfd0f6873ca3845d33b85eb785e4b7b7cefc89c978ef5b22f61b072c7f6552632ac34c7d4c769a8e80f13f2b7c7d6ef5b6ab0d9c; PSESSID=i3b7kttj3odkb99q657d065t83; wis_l_ignorelb=1; _gid=GA1.2.235754020.1533109834; s_cc=true; TS01bc94fe=015c1813eef428b7effbc431a09083e8d4b5a8acc4e2b78cafcec4950894ae2f15bfd0f687b0b7559aad916274dbd2dc6265ba921f</msg>
+<status status="PASS" endtime="20180801 10:50:38.128" starttime="20180801 10:50:38.128"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.gittigidiyor.com/</arg>
+</arguments>
+<msg timestamp="20180801 10:50:38.128" level="INFO">Opening url 'https://www.gittigidiyor.com/'</msg>
+<status status="PASS" endtime="20180801 10:50:39.997" starttime="20180801 10:50:38.128"></status>
+</kw>
+<status status="PASS" endtime="20180801 10:50:39.997" starttime="20180801 10:50:38.091"></status>
+</kw>
+<status status="PASS" endtime="20180801 10:50:39.997" starttime="20180801 10:50:28.352"></status>
+</kw>
+<test id="s1-t1" name="Search keyword and check results">
+<kw name="Search and click">
+<arguments>
+<arg>cep telefonu</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=search_word</arg>
+<arg>${searchkey}</arg>
+</arguments>
+<msg timestamp="20180801 10:50:39.999" level="INFO">Typing text 'cep telefonu' into text field 'id=search_word'.</msg>
+<status status="PASS" endtime="20180801 10:50:40.289" starttime="20180801 10:50:39.999"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>header_find_button</arg>
+</arguments>
+<msg timestamp="20180801 10:50:40.289" level="INFO">Clicking button 'header_find_button'.</msg>
+<status status="PASS" endtime="20180801 10:50:52.245" starttime="20180801 10:50:40.289"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${searchkey}</arg>
+</arguments>
+<status status="PASS" endtime="20180801 10:50:52.277" starttime="20180801 10:50:52.245"></status>
+</kw>
+<status status="PASS" endtime="20180801 10:50:52.277" starttime="20180801 10:50:39.998"></status>
+</kw>
+<status status="PASS" endtime="20180801 10:50:52.277" critical="yes" starttime="20180801 10:50:39.997"></status>
+</test>
+<test id="s1-t2" name="Find product and check results">
+<kw name="Go to product">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>css=.image-container</arg>
+</arguments>
+<status status="PASS" endtime="20180801 10:50:52.292" starttime="20180801 10:50:52.279"></status>
+</kw>
+<kw name="Get WebElements" library="Selenium2Library">
+<doc>Returns list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=.image-container</arg>
+</arguments>
+<assign>
+<var>${product_image}</var>
+</assign>
+<msg timestamp="20180801 10:50:52.303" level="INFO">${product_image} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="25cbc5a94982ee0f70ce271b576b030c", element="0.25255628256920293-81")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="25cbc5a949...</msg>
+<status status="PASS" endtime="20180801 10:50:52.303" starttime="20180801 10:50:52.292"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>css=.product-title.bold-opt</arg>
+</arguments>
+<assign>
+<var>${phone_name}</var>
+</assign>
+<msg timestamp="20180801 10:50:52.357" level="INFO">${phone_name} = Xiaomi Redmi Note 4X 32GB Hafıza 3GB RAM Cep Telefonu</msg>
+<status status="PASS" endtime="20180801 10:50:52.357" starttime="20180801 10:50:52.303"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${product_image[0]}</arg>
+</arguments>
+<msg timestamp="20180801 10:50:52.358" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="25cbc5a94982ee0f70ce271b576b030c", element="0.25255628256920293-81")&gt;'.</msg>
+<status status="PASS" endtime="20180801 10:51:04.091" starttime="20180801 10:50:52.358"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${phone_name}</arg>
+</arguments>
+<status status="PASS" endtime="20180801 10:51:04.110" starttime="20180801 10:51:04.091"></status>
+</kw>
+<status status="PASS" endtime="20180801 10:51:04.110" starttime="20180801 10:50:52.279"></status>
+</kw>
+<status status="PASS" endtime="20180801 10:51:04.111" critical="yes" starttime="20180801 10:50:52.278"></status>
+</test>
+<test id="s1-t3" name="Choose color, add to basket and complete shopping">
+<kw name="Add to basket">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>css=.product-page</arg>
+</arguments>
+<status status="PASS" endtime="20180801 10:51:04.123" starttime="20180801 10:51:04.112"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>css=.price-css</arg>
+</arguments>
+<assign>
+<var>${price}</var>
+</assign>
+<msg timestamp="20180801 10:51:04.152" level="INFO">${price} = 1.104,00 TL</msg>
+<status status="PASS" endtime="20180801 10:51:04.152" starttime="20180801 10:51:04.124"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=.retail-select</arg>
+</arguments>
+<msg timestamp="20180801 10:51:04.153" level="INFO">Clicking element 'css=.retail-select'.</msg>
+<status status="PASS" endtime="20180801 10:51:09.249" starttime="20180801 10:51:04.152"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>RtImg_399077_option</arg>
+</arguments>
+<msg timestamp="20180801 10:51:09.250" level="INFO">Clicking element 'RtImg_399077_option'.</msg>
+<status status="PASS" endtime="20180801 10:51:09.657" starttime="20180801 10:51:09.249"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>add-to-basket</arg>
+</arguments>
+<msg timestamp="20180801 10:51:09.657" level="INFO">Clicking button 'add-to-basket'.</msg>
+<status status="PASS" endtime="20180801 10:51:15.084" starttime="20180801 10:51:09.657"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=.gg-ui-button.gg-ui-btn-default.plr5</arg>
+</arguments>
+<msg timestamp="20180801 10:51:15.085" level="INFO">Clicking element 'css=.gg-ui-button.gg-ui-btn-default.plr5'.</msg>
+<status status="PASS" endtime="20180801 10:51:18.991" starttime="20180801 10:51:15.085"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${price}</arg>
+</arguments>
+<status status="PASS" endtime="20180801 10:51:19.011" starttime="20180801 10:51:18.992"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=.gg-d-24.gg-ui-btn.gg-ui-btn-blue.btn-pay</arg>
+</arguments>
+<msg timestamp="20180801 10:51:19.012" level="INFO">Clicking element 'css=.gg-d-24.gg-ui-btn.gg-ui-btn-blue.btn-pay'.</msg>
+<status status="PASS" endtime="20180801 10:51:20.893" starttime="20180801 10:51:19.012"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Üye olmadan devam etmek istiyorum</arg>
+</arguments>
+<status status="PASS" endtime="20180801 10:51:20.908" starttime="20180801 10:51:20.893"></status>
+</kw>
+<status status="PASS" endtime="20180801 10:51:20.908" starttime="20180801 10:51:04.112"></status>
+</kw>
+<status status="PASS" endtime="20180801 10:51:20.908" critical="yes" starttime="20180801 10:51:04.111"></status>
+</test>
+<test id="s1-t4" name="Continue to buy without sign in">
+<kw name="Continue without sign in">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>notmember</arg>
+</arguments>
+<msg timestamp="20180801 10:51:20.910" level="INFO">Clicking button 'notmember'.</msg>
+<status status="PASS" endtime="20180801 10:51:21.001" starttime="20180801 10:51:20.910"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=FormLoginEmail</arg>
+<arg>${MAILADRESS}</arg>
+</arguments>
+<msg timestamp="20180801 10:51:21.003" level="INFO">Typing text 'akturkegemen@gmail.com' into text field 'id=FormLoginEmail'.</msg>
+<status status="PASS" endtime="20180801 10:51:21.204" starttime="20180801 10:51:21.002"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>loginForm</arg>
+</arguments>
+<msg timestamp="20180801 10:51:21.205" level="INFO">Clicking button 'loginForm'.</msg>
+<status status="PASS" endtime="20180801 10:51:22.388" starttime="20180801 10:51:21.204"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Genel Toplam</arg>
+</arguments>
+<status status="PASS" endtime="20180801 10:51:22.404" starttime="20180801 10:51:22.388"></status>
+</kw>
+<status status="PASS" endtime="20180801 10:51:22.405" starttime="20180801 10:51:20.909"></status>
+</kw>
+<status status="PASS" endtime="20180801 10:51:22.405" critical="yes" starttime="20180801 10:51:20.909"></status>
+</test>
+<test id="s1-t5" name="Fill delivery adress info and continue">
+<kw name="Fill areas and continue">
+<kw name="Get WebElements" library="Selenium2Library">
+<doc>Returns list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=.gg-ui-txt.gg-input</arg>
+</arguments>
+<assign>
+<var>${deliveryinfo}</var>
+</assign>
+<msg timestamp="20180801 10:51:22.421" level="INFO">${deliveryinfo} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="25cbc5a94982ee0f70ce271b576b030c", element="0.8853489675408408-13")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="25cbc5a9498...</msg>
+<status status="PASS" endtime="20180801 10:51:22.421" starttime="20180801 10:51:22.407"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${deliveryinfo[0]}</arg>
+<arg>${NAME}</arg>
+</arguments>
+<msg timestamp="20180801 10:51:22.422" level="INFO">Typing text 'user111' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="25cbc5a94982ee0f70ce271b576b030c", element="0.8853489675408408-13")&gt;'.</msg>
+<status status="PASS" endtime="20180801 10:51:22.509" starttime="20180801 10:51:22.421"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${deliveryinfo[1]}</arg>
+<arg>${LASTNAME}</arg>
+</arguments>
+<msg timestamp="20180801 10:51:22.510" level="INFO">Typing text 'user222' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="25cbc5a94982ee0f70ce271b576b030c", element="0.8853489675408408-14")&gt;'.</msg>
+<status status="PASS" endtime="20180801 10:51:22.595" starttime="20180801 10:51:22.509"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${deliveryinfo[2]}</arg>
+<arg>${PHONE1}</arg>
+</arguments>
+<msg timestamp="20180801 10:51:22.596" level="INFO">Typing text '507' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="25cbc5a94982ee0f70ce271b576b030c", element="0.8853489675408408-15")&gt;'.</msg>
+<status status="PASS" endtime="20180801 10:51:22.664" starttime="20180801 10:51:22.595"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${deliveryinfo[3]}</arg>
+<arg>${PHONE2}</arg>
+</arguments>
+<msg timestamp="20180801 10:51:22.665" level="INFO">Typing text '7241929' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="25cbc5a94982ee0f70ce271b576b030c", element="0.8853489675408408-16")&gt;'.</msg>
+<status status="PASS" endtime="20180801 10:51:22.746" starttime="20180801 10:51:22.664"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=.gg-textarea.gg-ui-textarea</arg>
+<arg>${HOMEADRESS}</arg>
+</arguments>
+<msg timestamp="20180801 10:51:22.746" level="INFO">Typing text 'fahrettin kerim gökay caddesi no:145 daire:5 kat:3 kadıkoy/ıstanbul' into text field 'css=.gg-textarea.gg-ui-textarea'.</msg>
+<status status="PASS" endtime="20180801 10:51:23.148" starttime="20180801 10:51:22.746"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>CitySelect</arg>
+</arguments>
+<msg timestamp="20180801 10:51:23.148" level="INFO">Clicking element 'CitySelect'.</msg>
+<status status="PASS" endtime="20180801 10:51:23.277" starttime="20180801 10:51:23.148"></status>
+</kw>
+<kw name="Select From List" library="Selenium2Library">
+<doc>Deprecated. Use `Select From List By Label/Value/Index` instead.</doc>
+<arguments>
+<arg>xpath=//select[@id="CitySelect"]</arg>
+<arg>34</arg>
+</arguments>
+<msg timestamp="20180801 10:51:23.278" level="INFO">Selecting option(s) '34' from list 'xpath=//select[@id="CitySelect"]'.</msg>
+<status status="PASS" endtime="20180801 10:51:23.662" starttime="20180801 10:51:23.278"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>District</arg>
+</arguments>
+<msg timestamp="20180801 10:51:23.663" level="INFO">Clicking element 'District'.</msg>
+<status status="PASS" endtime="20180801 10:51:24.046" starttime="20180801 10:51:23.662"></status>
+</kw>
+<kw name="Select From List" library="Selenium2Library">
+<doc>Deprecated. Use `Select From List By Label/Value/Index` instead.</doc>
+<arguments>
+<arg>xpath=//select[@id="District"]</arg>
+<arg>Kadıköy</arg>
+</arguments>
+<msg timestamp="20180801 10:51:24.046" level="INFO">Selecting option(s) 'Kadıköy' from list 'xpath=//select[@id="District"]'.</msg>
+<status status="PASS" endtime="20180801 10:51:24.512" starttime="20180801 10:51:24.046"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>post-address-form</arg>
+</arguments>
+<msg timestamp="20180801 10:51:24.513" level="INFO">Clicking button 'post-address-form'.</msg>
+<status status="PASS" endtime="20180801 10:51:26.306" starttime="20180801 10:51:24.512"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Kart Numarası</arg>
+</arguments>
+<status status="PASS" endtime="20180801 10:51:26.327" starttime="20180801 10:51:26.306"></status>
+</kw>
+<status status="PASS" endtime="20180801 10:51:26.328" starttime="20180801 10:51:22.406"></status>
+</kw>
+<status status="PASS" endtime="20180801 10:51:26.328" critical="yes" starttime="20180801 10:51:22.406"></status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180801 10:51:26.492" starttime="20180801 10:51:26.329"></status>
+</kw>
+<doc>Open Main Page</doc>
+<status status="PASS" endtime="20180801 10:51:26.492" starttime="20180801 10:50:28.235"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="5">Critical Tests</stat>
+<stat fail="0" pass="5">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="robotFrame" pass="5">robotFrame</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
