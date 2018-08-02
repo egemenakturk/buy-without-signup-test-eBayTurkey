@@ -20,12 +20,12 @@ Suite Teardown  Close All Browsers
 
 ${BROWSER}          chrome
 ${HOMEPAGE}         https://www.gittigidiyor.com
-${MAILADRESS}       akturkegemen@gmail.com
-${NAME}             user111
-${LASTNAME}         user222
-${PHONE1}           507
-${PHONE2}           7241929
-${HOMEADRESS}       fahrettin kerim gökay caddesi no:145 daire:5 kat:3 kadıkoy/ıstanbul
+${MAILADRESS}       ************@*****.***
+${NAME}             *********
+${LASTNAME}         *********
+${PHONE1}           ***
+${PHONE2}           ********
+${HOMEADRESS}       *********************************************
 
 *** Keywords ***
 
