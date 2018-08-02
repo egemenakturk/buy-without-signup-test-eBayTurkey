@@ -3,6 +3,13 @@
 
 Documentation                       Open Main Page
 Library                             Selenium2Library
+
+Variables                           ../Resources/HomePage.yaml
+Variables                           ../Resources/Payment.yaml
+Variables                           ../Resources/ProductDetails.yaml
+Variables                           ../Resources/Search.yaml
+Variables                           ../Resources/ShoppingCart.yaml
+
 Suite Setup     run keywords
 ...             Go to homepage  AND
 ...             Disable all popups
@@ -13,12 +20,12 @@ Suite Teardown  Close All Browsers
 
 ${BROWSER}          chrome
 ${HOMEPAGE}         https://www.gittigidiyor.com
-${MAILADRESS}       ***************@gmail.com
+${MAILADRESS}       akturkegemen@gmail.com
 ${NAME}             user111
 ${LASTNAME}         user222
-${PHONE1}           ***
-${PHONE2}           *******
-${HOMEADRESS}       ********************************************
+${PHONE1}           507
+${PHONE2}           7241929
+${HOMEADRESS}       fahrettin kerim gökay caddesi no:145 daire:5 kat:3 kadıkoy/ıstanbul
 
 *** Keywords ***
 
@@ -27,27 +34,27 @@ Go to homepage
 
 Search and click
     [Arguments]     ${searchkey}
-    Input Text      id=search_word  ${searchkey}
-    Click Button    header_find_button
+    Input Text      ${home.search_input}   ${searchkey}
+    Click Button    ${home.search_button}
     wait until page contains     ${searchkey}
 
 Go to product
-    Wait Until Page Contains Element    css=.image-container
-    ${product_image}  Get WebElements    css=.image-container
-    ${phone_name}     Get Text    css=.product-title.bold-opt
+    Wait Until Page Contains Element     ${SearchResult.first_product}
+    ${product_image}  Get WebElements    ${SearchResult.first_product}
+    ${phone_name}     Get Text    ${SearchResult.product_name}
     Click Element   ${product_image[0]}
     Wait Until Page Contains    ${phone_name}
 
 Add to basket
-    Wait Until Page Contains Element     css=.product-page
-    ${price}         Get Text    css=.price-css
+    Wait Until Page Contains Element     ${ProductDtls.all_price}
+    ${price}         Get Text    ${ProductDtls.all_price}
     #${color_toggle}  Get WebElements    css=.product-page
-    Click Element    css=.retail-select
-    Click Element    RtImg_399077_option
-    Click Button     add-to-basket
-    Click Element    css=.gg-ui-button.gg-ui-btn-default.plr5
+    Click Element    ${ProductDtls.variant_dropdowns}
+    Click Element    RtImg_957767_option
+    Click Button     ${ProductDtls.add_to_basket}
+    Click Element    ${ShoppingCrt.continue_to_basket}
     Wait Until Page Contains    ${price}
-    Click Element    css=.gg-d-24.gg-ui-btn.gg-ui-btn-blue.btn-pay
+    Click Element    ${ShoppingCrt.complete_shopping}
     Wait Until Page Contains    Üye olmadan devam etmek istiyorum
 
 Disable all popups
@@ -61,23 +68,23 @@ Disable all popups
     Go To    https://www.gittigidiyor.com/
 
 Continue without sign in
-    Click Button    notmember
-    Input Text      id=FormLoginEmail  ${MAILADRESS}
-    Click Button    loginForm
+    Click Button    ${PaymentLogin.not_member_choice}
+    Input Text      ${PaymentLogin.not_member_email}  ${MAILADRESS}
+    Click Button    ${PaymentLogin.login_button}
     Wait Until Page Contains    Genel Toplam
 
 Fill areas and continue
     ${deliveryinfo}  Get WebElements    css=.gg-ui-txt.gg-input
-    Input Text    ${deliveryinfo[0]}    ${NAME}
-    Input Text    ${deliveryinfo[1]}    ${LASTNAME}
-    Input Text    ${deliveryinfo[2]}    ${PHONE1}
-    Input Text    ${deliveryinfo[3]}    ${PHONE2}
-    Input Text    css=.gg-textarea.gg-ui-textarea  ${HOMEADRESS}
-    Click Element     CitySelect
-    Select From List  xpath=//select[@id="CitySelect"]  34
-    Click Element    District
-    Select From List  xpath=//select[@id="District"]    Kadıköy
-    Click Button    post-address-form
+    Input Text    ${SelectAdress.guest_name}          ${NAME}
+    Input Text    ${SelectAdress.guest_surname}       ${LASTNAME}
+    Input Text    ${SelectAdress.guest_phone_area}    ${PHONE1}
+    Input Text    ${SelectAdress.guest_phone}         ${PHONE2}
+    Input Text    ${SelectAdress.guest_adress}  ${HOMEADRESS}
+    Click Element     ${SelectAdress.guest_city}
+    Select From List  ${SelectAdress.guest_city}  34
+    Click Element     ${SelectAdress.guest_district}
+    Select From List  ${SelectAdress.guest_district}    Kadıköy
+    Click Button      ${SelectAdress.finish_fill_adress}
     Wait Until Page Contains    Kart Numarası
 
 

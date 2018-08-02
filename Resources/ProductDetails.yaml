@@ -1,5 +1,4 @@
-ProductDetails:
+ProductDtls:
   all_price:                css=.price-css
-  variant_dropdowns:        css=.retil-select
+  variant_dropdowns:        css=.retail-select
   add_to_basket:            id=add-to-basket
-  

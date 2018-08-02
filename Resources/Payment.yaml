@@ -4,9 +4,10 @@ PaymentLogin:
   login_button:               id=loginForm
 SelectAdress:
   guest_name:                 name=Name
-  guest_surname:              name=Surname
+  guest_surname:              name=SurName
   guest_phone_area:           name=TelOp1
   guest_phone:                name=TelNo1
-  guest_adress:               name=Adress
+  guest_adress:               name=Address
   guest_city:                 id=CitySelect
   guest_district:             id=District
+  finish_fill_adress:         id=post-address-form
