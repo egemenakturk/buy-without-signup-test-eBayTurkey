@@ -1,0 +1,5 @@
+ProductDetails:
+  all_price:                css=.price-css
+  variant_dropdowns:        css=.retil-select
+  add_to_basket:            id=add-to-basket
+  

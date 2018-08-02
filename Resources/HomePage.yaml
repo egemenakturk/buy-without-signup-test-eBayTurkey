@@ -1,0 +1,3 @@
+Homepage:
+  search_button:        id=header_find_button
+  search_input:         id=search_word

@@ -1,0 +1,4 @@
+ShoppingCart:
+  continue_to_basket:               css=.css=.gg-ui-button.gg-ui-btn-default.plr5
+  complete_shopping:                css=.btn-pay
+  
